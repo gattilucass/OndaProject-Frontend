@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { X, Sparkles, Bot, MessageSquare, Video } from "lucide-react"; // Importamos Video para usarlo en el modal
+import { Sparkles, Bot, MessageSquare, Video } from "lucide-react"; // 'X' eliminado de las importaciones
 
 interface PromptModalProps {
   isOpen: boolean;
@@ -15,15 +15,15 @@ export default function PromptModal({ isOpen, onClose }: PromptModalProps) {
       content: "Fashion model showcase: cinematic 4-second video of [male/female] model wearing a premium yellow designer shirt. Studio lighting, professional fashion photography style, minimal movement, focus on fabric texture and fit."
     },
     {
-      title: "KLING AI (Video Hombre)", // Nuevo título
-      icon: Video, // Usando Video para AI de video
-      color: "from-blue-500 to-blue-600", // Nuevo color
+      title: "KLING AI (Video Hombre)",
+      icon: Video,
+      color: "from-blue-500 to-blue-600",
       content: "A male model (25–35) walks slowly along the shoreline of a calm, bright beach during golden hour. He is wearing the exact same pastel yellow shirt from the reference photo — sleeves folded, chest pocket visible, shirt untucked. The camera pans smoothly from left to right following his walk for 5 seconds. The shirt remains clearly visible and untouched — full frontal and side view. The model has a calm expression and natural posture. Background is soft sand and ocean waves. Editorial lighting, 9:16 vertical."
     },
     {
-      title: "PIKA AI (Video Mujer)", // Nuevo título
-      icon: Video, // Usando Video para AI de video
-      color: "from-red-500 to-red-600", // Nuevo color, diferente al anterior de Pika AI en footer para variar.
+      title: "PIKA AI (Video Mujer)",
+      icon: Video,
+      color: "from-red-500 to-red-600",
       content: "A woman model stands on a tropical beach at sunset, looking toward the ocean. He slowly adjusts the sleeves or collar of his pastel yellow shirt, worn exactly as shown in the reference photo — no distortion, full shirt visible. The model’s gesture is slow and elegant, as if preparing for a photoshoot. Wind lightly moves the fabric, adding texture. Background shows soft sand, sky gradients and ocean waves. Camera is still. 5 seconds max. Vertical 9:16."
     },
     {
@@ -33,9 +33,9 @@ export default function PromptModal({ isOpen, onClose }: PromptModalProps) {
       content: "Create elegant, aspirational copy for a premium AI-designed yellow shirt. Two versions: one for female audience focusing on flow and daily elegance, another for male audience emphasizing modern cut and classic essence."
     },
     {
-      title: "GEMINI (Asistencia General)", // Título para GEMINI
-      icon: Sparkles, // Usando Sparkles para AI
-      color: "from-teal-500 to-teal-600", // Color para Gemini
+      title: "GEMINI (Asistencia General)",
+      icon: Sparkles,
+      color: "from-teal-500 to-teal-600",
       content: "Actúa como un desarrollador full-stack experto para una startup de moda premium. Asiste con arquitectura, desarrollo frontend (React, Tailwind), backend (Node.js, Express, PostgreSQL) y estrategias de despliegue en Vercel. Proporciona soluciones eficientes, escalables y con código limpio."
     }
   ];
@@ -53,8 +53,14 @@ export default function PromptModal({ isOpen, onClose }: PromptModalProps) {
                 Prompts Utilizados
               </DialogTitle>
             </div>
-            {/* Se eliminó el botón duplicado. DialogPrimitive.Close maneja el cierre. */}
-            {/* El botón X ya está gestionado por el componente DialogContent de shadcn/ui */}
+            {/* El botón de cierre 'X' ya es proporcionado por el componente DialogContent de shadcn/ui. */}
+            {/* Se elimina el botón 'X' personalizado para evitar duplicados. */}
+            {/* <button 
+              onClick={onClose}
+              className="p-2 rounded-full hover:bg-gray-100 transition-all duration-200 transform hover:scale-110"
+            >
+              <X className="w-6 h-6 text-gray-400 hover:text-gray-600" />
+            </button> */}
           </div>
         </DialogHeader>
         
